@@ -1,7 +1,7 @@
 {
   "name": "oauthlambda-generateauthurl",
   "version": "1.0.0",
-  "description": "Lambda back end for googleapis oauth2 generateAuthUrl",
+  "description": "Lambda backend for googleapis oauth2 generateAuthUrl",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
