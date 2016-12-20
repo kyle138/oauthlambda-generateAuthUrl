@@ -3,10 +3,11 @@
 var google = require("googleapis");
 var OAuth2 = google.auth.OAuth2;
 
+// Initialize oauth2Client using Lambda environment variables
 var oauth2Client = new OAuth2(
-  "662293723339-9pqrciusdj9qu7qsfnsph3ek9m696maa.apps.googleusercontent.com", // Client ID
-  "uqzoMKLTnr96BNEm6Y8lsjHL", // Client Secret
-  "http://hedmmysqltest.s3-website-us-east-1.amazonaws.com/gapicb/" // Redirect URL
+  process.env.clientId, // Client ID
+  process.env.clientSecret, // Client Secret
+  process.env.redirectUrl // Redirect URL
 );
 
 // plus.me scope is for OAuth2 signin.
