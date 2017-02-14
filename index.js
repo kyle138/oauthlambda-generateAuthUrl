@@ -33,6 +33,8 @@ exports.handler = (event, context, callback) => {
       scope: scopes // If you only need one scope you can pass it as a string
     });
 
+    callback(null,authUrl);
+
   } else {
     callback("Invalid Origin", null); // Login only allowed from approved origins
   }
