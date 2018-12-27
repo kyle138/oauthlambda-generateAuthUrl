@@ -27,15 +27,16 @@ exports.handler = (event, context, callback) => {
         redirectUrl // Redirect URL decided above
       );
 
-      // plus.me scope is for OAuth2 signin.
+/*
       // userinfo.email scope is to retrieve email address of user attempting to sign in
       var scopes = [
         'https://www.googleapis.com/auth/userinfo.email'
       ];
+*/
 
       var authUrl = oauth2Client.generateAuthUrl({
         access_type: 'offline', // 'online' (default) or 'offline' (gets refresh_token)
-        scope: scopes // If you only need one scope you can pass it as a string
+        scope: 'https://www.googleapis.com/auth/userinfo.email'
       });
       console.log("Success. authUrl: "+authUrl);
       callback(null,authUrl);
