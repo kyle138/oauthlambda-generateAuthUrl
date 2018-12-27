@@ -13,6 +13,6 @@
   "author": "Kyle138",
   "license": "ISC",
   "dependencies": {
-    "googleapis": "^14.1.0"
+    "googleapis": "^36.0.0"
   }
 }
