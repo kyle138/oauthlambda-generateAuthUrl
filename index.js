@@ -30,7 +30,6 @@ exports.handler = (event, context, callback) => {
       // plus.me scope is for OAuth2 signin.
       // userinfo.email scope is to retrieve email address of user attempting to sign in
       var scopes = [
-        'https://www.googleapis.com/auth/plus.me',
         'https://www.googleapis.com/auth/userinfo.email'
       ];
 
