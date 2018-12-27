@@ -26,17 +26,10 @@ exports.handler = (event, context, callback) => {
         process.env.clientSecret, // Client Secret
         redirectUrl // Redirect URL decided above
       );
-
-/*
-      // userinfo.email scope is to retrieve email address of user attempting to sign in
-      var scopes = [
-        'https://www.googleapis.com/auth/userinfo.email'
-      ];
-*/
-
+      // Generate Authentication URL
       var authUrl = oauth2Client.generateAuthUrl({
         access_type: 'offline', // 'online' (default) or 'offline' (gets refresh_token)
-        scope: 'https://www.googleapis.com/auth/userinfo.email'
+        scope: 'https://www.googleapis.com/auth/userinfo.email' // userinfo.email scope is to retrieve email address of user attempting to sign in
       });
       console.log("Success. authUrl: "+authUrl);
       callback(null,authUrl);
