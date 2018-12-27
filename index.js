@@ -1,7 +1,6 @@
 'use strict';
 
 const {google} = require('googleapis');
-//var OAuth2 = google.auth.OAuth2;
 
 exports.handler = (event, context, callback) => {
   console.log('Received event:', JSON.stringify(event,null,2)); //DEBUG
